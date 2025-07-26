@@ -12,6 +12,10 @@ app.use(express.json());
 
 // Mount routes
 app.use('/api/tasks', taskRoutes);
+app.get('/', (req, res) => {
+  res.send('Welcome to the TaskMaster API');
+});
+
 
 const PORT = process.env.PORT || 3000;
 
